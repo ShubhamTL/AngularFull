@@ -1,0 +1,39 @@
+
+<div class="container" [hidden]="submitted">
+    <h3>Update Employee</h3>
+    <form (ngSubmit)="onFormSubmit()">
+        <div class="row">
+            <div class="col-25">
+                <label for="empId">Employee Id</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="empId" name="employeeId" [(ngModel)]="employee.employeeId" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="name" [(ngModel)]="employee.name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="salary">salary</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="salary" [(ngModel)]="employee.salary">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Update Employee">
+        </div>
+    </form>
+    </div>
+    <div class="container" [hidden]="!submitted">
+        <P>Employee Updated successfully</P>
+        <div class="row">
+        <input type="button" (click)="goToHome()" value="Back To Home">
+    </div>
+    </div>

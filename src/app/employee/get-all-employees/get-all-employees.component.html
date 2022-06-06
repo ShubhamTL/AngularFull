@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>All Employees</h3>
+    <table id="employees">
+        <tr>
+            <th>Employee Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th colspan="3">Action</th>
+        </tr>
+        <tr *ngFor="let employee of allEmployee">
+            <td>{{employee.employeeId}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.salary}}</td>
+            <td><input type="button" (click)="getdetails(employee.employeeId)" value="Details"></td>
+            <td><input type="button" (click)="updateEmployee(employee.employeeId)" value="Update"></td>
+            <td><input type="button"  (click)="deleteEmployee(employee.employeeId)" value="Delete"></td>
+        </tr>
+    </table>
+</div>
